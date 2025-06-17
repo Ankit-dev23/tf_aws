@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        terraform 'terraform-1.12.2 darwin(adm64)'
+    }
+
     environment {
         TF_ENV = "${params.ENVIRONMENT}"
         AWS_DEFAULT_REGION = 'ap-south-1'
