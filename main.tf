@@ -8,9 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  access_key = env.access_key
-  secret_key = env.secret_key
-  region     = "ap-south-1"
+  region = "ap-south-1"
 }
 
 resource "aws_instance" "web" {
