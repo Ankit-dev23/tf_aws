@@ -6,9 +6,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = aws_s3_bucket.ankit_bucket.bucket
-    key    = "backend.tfstate"
-    region = var.region
+    bucket       = aws_s3_bucket.ankit_bucket.bucket
+    key          = "backend.tfstate"
+    region       = var.region
+    use_lockfile = true
   }
 }
 
