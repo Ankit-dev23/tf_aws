@@ -5,12 +5,6 @@ terraform {
       version = "6.0.0-beta3"
     }
   }
-  backend "s3" {
-    bucket       = aws_s3_bucket.ankit_bucket.bucket
-    key          = "backend.tfstate"
-    region       = var.region
-    use_lockfile = true
-  }
 }
 
 provider "aws" {
