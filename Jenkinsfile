@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        terraform 'terraform-1.12.2 darwin(adm64)'
+        terraform 'terraform'
     }
 
     environment {
