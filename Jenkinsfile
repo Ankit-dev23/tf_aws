@@ -25,11 +25,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 sh '''
-                terraform init \
-                  -backend-config="key=${TF_ENV}/terraform.tfstate" \
-                  -backend-config="bucket=my-terraform-state-bucket" \
-                  -backend-config="region=ap-south-1" \
-                  -backend-config="dynamodb_table=my-lock-table"
+                terraform init
                 '''
             }
         }
