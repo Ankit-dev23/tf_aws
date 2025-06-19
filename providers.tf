@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "ankitbucketbackend"
-    key    = "backend.tfstate"
+    key    = "env:/dev/backend.tfstate"
     region = "ap-south-1"
   }
 }
